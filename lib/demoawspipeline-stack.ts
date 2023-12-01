@@ -18,8 +18,8 @@ export class DemoawspipelineStack extends cdk.Stack {
 
     const democicdpipeline = new pipelines.CodePipeline(this, 'demopipeline', {
       synth : new pipelines.ShellStep('Synth', {
-        input: pipelines.CodePipelineSource.gitHub('bellhoser/cicdk_lab', 'main'),
-        commands: [ 'npm ci', 'npm run build', 'npx cdk synth']}});
+        input: pipelines.CodePipelineSource.gitHub('bellhoser/cicdk_lab', 'main', ),
+        commands: [ 'npm ci', 'npm run build', 'npx cdk synth']})});
       
   }
 }
